@@ -913,6 +913,7 @@ func GenerateParamsTypes(op OperationDefinition) []TypeDefinition {
 			Required:      param.Required,
 			Schema:        pSchema,
 			NeedsFormTag:  param.Style() == "form",
+			NeedsQueryTag: param.Style() == "form",
 			Extensions:    param.Spec.Extensions,
 		}
 		s.Properties = append(s.Properties, prop)
